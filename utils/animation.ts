@@ -1,4 +1,4 @@
-import { Variants } from "framer-motion";
+import { animate, Variants } from "framer-motion";
 
 export const iconAnimations: Record<string, Variants> = {
   bounce: {
@@ -10,12 +10,16 @@ export const iconAnimations: Record<string, Variants> = {
   },
 
   rotate: {
-    hover: { rotate: 360 },
+    hover: { rotate: 360 ,scale:1.5 },
     transition: {
-      duration: 1,
-      ease: "easeInOut",
+      type: "spring",
+      stiffness: 400,
+      damping: 100,
+      duration:2,
     },
   },
+  
+  
 
   scale: {
     hover: { scale: 1.2 },
@@ -26,13 +30,14 @@ export const iconAnimations: Record<string, Variants> = {
   },
 
   pulse: {
-    animate: {
-      scale: [1, 1.15, 1],
-    },
-    transition: {
-      duration: 1.4,
-      repeat: Infinity,
-      ease: "easeInOut",
+    hover: {
+      scale: [1.5, 1.1, 1.5],
+      transition: {
+        duration: 1.4,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
     },
   },
+  
 };
