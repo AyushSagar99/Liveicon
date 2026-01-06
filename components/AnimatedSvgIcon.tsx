@@ -1,14 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ReactNode } from "react";
 
-export const pathVariants = {
+export const pathVariants: Variants = {
   initial: {
     pathLength: 0,
     opacity: 0,
   },
-  animate: {
+  finish: {
     pathLength: 1,
     opacity: 1,
     transition: {
@@ -37,7 +37,7 @@ export function AnimatedSvgIcon({
       strokeLinejoin="round"
       initial="initial"
      // animate="animate"
-      whileHover="animate"
+      whileHover="finish"
     >
       {children}
     </motion.svg>

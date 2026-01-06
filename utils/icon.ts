@@ -7,5 +7,5 @@ export const ICONS: { id: number; name: IconName }[] = [
   { id: 3, name: "star" },
   { id: 4, name: "thumbsup" },
   { id: 5, name: "youtube" },
-
+  { id: 6, name: "search" },
 ];
