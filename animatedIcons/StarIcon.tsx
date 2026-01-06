@@ -19,7 +19,7 @@ export function StarIcon({ size = 32 }: { size?: number }) {
        
      }}
      transition={{
-       duration: 1.5,
+       duration: 1,
        ease: "easeInOut",
      }}
       

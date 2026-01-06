@@ -20,7 +20,7 @@ export function ThumbsupIcon({ size = 32 }: { size?: number }) {
     },
     liked: {
       scale: 1.2,
-      stroke: "black",
+      stroke: "blue",
       transition: {
         type: "spring",
         stiffness: 400,
@@ -38,6 +38,7 @@ export function ThumbsupIcon({ size = 32 }: { size?: number }) {
       fill="none"
       animate={controls}
       variants={variants}
+      stroke="currentColor"
       style={{ cursor: "pointer" }}
     >
       <motion.path d="M2 12.5C2 11.3954 2.89543 10.5 4 10.5C5.65685 10.5 7 11.8431 7 13.5V17.5C7 19.1569 5.65685 20.5 4 20.5C2.89543 20.5 2 19.6046 2 18.5V12.5Z" />
