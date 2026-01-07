@@ -11,4 +11,5 @@ export const ICONS: { id: number; name: IconName }[] = [
   { id: 7, name: "notification" },
   { id: 8, name: "faviourate" },
   { id: 9, name: "download" },
+  { id: 10, name: "add" },
 ];

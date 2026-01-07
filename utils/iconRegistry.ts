@@ -8,6 +8,7 @@ import {SearchIcon} from "@/animatedIcons/SearchIcon";
 import {NotificationIcon} from "@/animatedIcons/Notification"
 import { FaviourateIcon } from "@/animatedIcons/FaviourateIcon";
 import { DownloadIcon } from "@/animatedIcons/DownloadIcon";
+import { AddIcon } from "@/animatedIcons/AddIcon";
 
 export const ICON_REGISTRY = {
   task: TaskIcon,
@@ -18,7 +19,8 @@ export const ICON_REGISTRY = {
   search:SearchIcon,
   notification:NotificationIcon,
   faviourate:FaviourateIcon,
-  download:DownloadIcon
+  download:DownloadIcon,
+  add:AddIcon
 };
 
 export type IconName = keyof typeof ICON_REGISTRY;
