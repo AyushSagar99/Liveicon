@@ -13,6 +13,12 @@ export function TaskIcon({ size = 36 }: { size?: number }) {
       <motion.path
         d="M7.99609 15.0003H11.4247M7.99609 11.0003H15.9961"
         variants={pathVariants}
+        initial={
+          {opacity:0, pathLength:0}
+        }
+        transition={{
+          duration:0.5
+        }}
          //initial="initial"
         // whileHover="finish"
       />

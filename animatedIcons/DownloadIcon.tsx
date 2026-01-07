@@ -1,10 +1,27 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export function DownloadIcon({ size = 32 }: { size?: number }) {
 
-  const arrowVariants = {
+  const arrowHeadVariants: Variants = {
     hover: {
-      y: [-3, 3]
+      y: [0, 6, 0],
+      transition: {
+        duration: 1,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  const arrowLineVariants: Variants = {
+    hover: {
+      y: [0, 3, 0],
+      opacity: [1, 0.6, 1],
+      transition: {
+        duration: 1,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
     }
   };
 
@@ -15,29 +32,17 @@ export function DownloadIcon({ size = 32 }: { size?: number }) {
       viewBox="0 0 24 24"
       stroke="currentColor"
       fill="none"
+      whileHover="hover"
     >
 
-      <motion.path 
-      variants={arrowVariants}
-      whileHover="hover"
-      transition={{
-        duration: 0.8,
-        repeat: Infinity,
-        repeatType: "reverse",
-        ease: "easeInOut"
-      }}
-      d="M12 3V15" />
+      <motion.path
+        d="M12 3V15"
+        variants={arrowLineVariants}
+      />
 
       <motion.path
         d="M12 15L8 11M12 15L16 11"
-        variants={arrowVariants}
-        whileHover="hover"
-        transition={{
-          duration: 0.8,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut"
-        }}
+        variants={arrowHeadVariants}
       />
 
       <path d="M5 21H19" />
