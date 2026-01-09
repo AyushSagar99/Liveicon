@@ -10,6 +10,7 @@ import { FaviourateIcon } from "@/animatedIcons/FaviourateIcon";
 import { DownloadIcon } from "@/animatedIcons/DownloadIcon";
 import { AddIcon } from "@/animatedIcons/AddIcon";
 import { AlarmIcon } from "@/animatedIcons/AlarmIcon";
+import { SettingIcon } from "@/animatedIcons/SettingIcon";
 
 export const ICON_REGISTRY = {
   task: TaskIcon,
@@ -22,7 +23,8 @@ export const ICON_REGISTRY = {
   faviourate:FaviourateIcon,
   download:DownloadIcon,
   add:AddIcon,
-  alarm:AlarmIcon
+  alarm:AlarmIcon,
+  setting:SettingIcon
 };
 
 export type IconName = keyof typeof ICON_REGISTRY;
