@@ -27,23 +27,19 @@ export function Modal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black/40 backdrop-blur-sm"
         onClick={onClose}
       />
 
-      {/* Modal */}
       <div
         className="relative z-10 w-[90%] max-w-2xl bg-fuchsia-200 rounded-2xl shadow-2xl p-6 space-y-4"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Preview */}
         <div className="flex justify-center items-center p-4 rounded-xl bg-fuchsia-300">
           {children}
         </div>
 
-        {/* Note */}
         <div className="text-sm text-gray-700">
           Requires{" "}
           <code className="px-1 py-0.5 rounded bg-black/10 font-mono">
@@ -51,12 +47,21 @@ export function Modal({
           </code>
         </div>
 
-        {/* Code block */}
-        <pre className="relative bg-black text-white rounded-xl p-4 text-xs overflow-x-auto select-text">
+        <pre
+        className="
+      bg-black
+      text-white
+      rounded-xl
+      p-4
+      text-xs
+      overflow-auto
+      max-h-64
+      select-text
+      "
+>
           <code>{code}</code>
         </pre>
 
-        {/* Copy button */}
         <button
           onClick={handleCopy}
           className="w-full py-2 rounded-lg bg-black text-white text-sm hover:bg-black/80 transition"
