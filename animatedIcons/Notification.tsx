@@ -8,7 +8,7 @@ export function NotificationIcon({size =32}: {size?: number}) {
       rotate: [-12, 12]
     }}
     transition={{
-      duration: 0.8,
+      duration: 0.5,
       repeat: Infinity,
       repeatType: "reverse",
       ease: "easeInOut"
