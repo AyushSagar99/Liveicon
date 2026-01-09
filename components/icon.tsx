@@ -32,7 +32,11 @@ export default function IconGrid() {
       </div>
 
       {open && selectedIcon && (
-        <Modal onClose={() => setOpen(false)}>
+        <Modal
+        onClose={() => setOpen(false)}
+        selectedIcon={selectedIcon}
+      >
+      
           {(() => {
             const Icon = ICON_REGISTRY[selectedIcon];
             return <Icon size={64} />;
