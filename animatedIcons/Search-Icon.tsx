@@ -8,7 +8,6 @@ export function SearchIcon({ size = 24 }: { size?: number }) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="white"
-      style={{ cursor: "pointer" }}
       whileHover={{
         scale: 1.2,
         rotate: -9

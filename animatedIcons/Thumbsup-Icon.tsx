@@ -10,8 +10,6 @@ export function ThumbsupIcon({ size = 32 }: { size?: number }) {
       stroke="white"
       strokeWidth={2}
       whileHover={{
-        scale: [0.5,1.15],
-        stroke: "#2563eb",
         rotate:[30,0]
       }}
       transition={{
