@@ -3,10 +3,10 @@ import { motion, Variants } from "framer-motion";
 export function YoutubeIcon({size= 32}:{size?: number}) {
    const variants: Variants={
     hover: {
-      pathLength: [1, 0, 1],
+      pathLength: [1, 0],
       opacity: 1,
       transition: {
-        duration: 1,
+        duration: 0.5,
         repeat: Infinity,
         ease: "easeInOut"
       }
@@ -20,6 +20,9 @@ export function YoutubeIcon({size= 32}:{size?: number}) {
     fill="none"
     stroke="white"
     whileHover="hover"
+    initial={{
+      pathLength:1
+    }}
     strokeWidth={2}
     transition={{ 
       duration: 1,

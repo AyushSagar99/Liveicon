@@ -1,16 +1,16 @@
 // utils/iconRegistry.ts
-import { TaskIcon } from "@/animatedIcons/TaskIcon";
-import { TwitterIcon } from "@/animatedIcons/TwitterIcon";
-import { StarIcon } from "@/animatedIcons/StarIcon";
-import {ThumbsupIcon} from "@/animatedIcons/ThumbsupIcon";
-import {YoutubeIcon} from "@/animatedIcons/YoutubeIcon";
-import {SearchIcon} from "@/animatedIcons/SearchIcon";
+import { TaskIcon } from "@/animatedIcons/Task-Icon";
+import { TwitterIcon } from "@/animatedIcons/Twitter-Icon";
+import { StarIcon } from "@/animatedIcons/Star-Icon";
+import {ThumbsupIcon} from "@/animatedIcons/Thumbsup-Icon";
+import {YoutubeIcon} from "@/animatedIcons/Youtube-Icon";
+import {SearchIcon} from "@/animatedIcons/Search-Icon";
 import {NotificationIcon} from "@/animatedIcons/Notification"
-import { FaviourateIcon } from "@/animatedIcons/FaviourateIcon";
-import { DownloadIcon } from "@/animatedIcons/DownloadIcon";
-import { AddIcon } from "@/animatedIcons/AddIcon";
-import { AlarmIcon } from "@/animatedIcons/AlarmIcon";
-import { SettingIcon } from "@/animatedIcons/SettingIcon";
+import { FaviourateIcon } from "@/animatedIcons/Faviourate-Icon";
+import { DownloadIcon } from "@/animatedIcons/Download-Icon";
+import { AddIcon } from "@/animatedIcons/Add-Icon";
+import { AlarmIcon } from "@/animatedIcons/Alarm-Icon";
+import { SettingIcon } from "@/animatedIcons/Setting-Icon";
 
 export const ICON_REGISTRY = {
   task: TaskIcon,

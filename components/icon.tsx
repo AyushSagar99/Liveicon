@@ -5,7 +5,7 @@ import { ICONS } from "@/utils/icon";
 import { ICON_REGISTRY } from "@/utils/iconRegistry";
 import { ICON_CODE } from "@/utils/iconCode";
 import { Copy } from "@/animatedIcons/Copy";
-import TickIcon from "@/animatedIcons/TickIcon";
+import TickIcon from "@/animatedIcons/Tick-Icon";
 
 type IconName = keyof typeof ICON_REGISTRY;
 
@@ -41,10 +41,7 @@ function IconCard({ name }: { name: IconName }) {
         backdrop-blur-xl bg-black/20 border border-white/30
         rounded-xl p-8 shadow-lg
         flex items-center justify-center
-        transition-all duration-200
-        hover:-translate-y-1
-        hover:shadow-2xl
-        hover:shadow-gray-200
+        transition-all duration-200        
       "
     >
       <Icon size={40} />
@@ -52,7 +49,7 @@ function IconCard({ name }: { name: IconName }) {
       <button
         onClick={handleCopy}
         className="
-          absolute bottom-1 -4
+          absolute top-1 right-2
            text-xs rounded-md
           transition cursor-pointer
           
