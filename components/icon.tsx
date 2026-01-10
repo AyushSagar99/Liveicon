@@ -39,7 +39,7 @@ function IconCard({ name }: { name: IconName }) {
       className="
         relative group
         backdrop-blur-xl bg-black/20 border border-white/30
-        rounded-xl p-6 shadow-lg
+        rounded-xl p-8 shadow-lg
         flex items-center justify-center
         transition-all duration-200
         hover:-translate-y-1
