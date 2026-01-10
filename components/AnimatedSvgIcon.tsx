@@ -25,7 +25,7 @@ export function AnimatedSvgIcon({
       height={size}
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="white"
       strokeWidth={1}
       strokeLinecap="round"
       strokeLinejoin="round"

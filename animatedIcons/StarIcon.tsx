@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 
 export function StarIcon({ size = 32 }: { size?: number }) {
@@ -9,7 +7,8 @@ export function StarIcon({ size = 32 }: { size?: number }) {
       height={size}
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="white"
+      strokeWidth={2}
     >
       <motion.path 
      initial={{ pathLength: 1, opacity: 1 }}

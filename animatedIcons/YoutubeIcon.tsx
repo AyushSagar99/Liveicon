@@ -18,8 +18,9 @@ export function YoutubeIcon({size= 32}:{size?: number}) {
     height={size}
     viewBox="0 0 24 24"
     fill="none"
-    stroke="currentColor"
+    stroke="white"
     whileHover="hover"
+    strokeWidth={2}
     transition={{ 
       duration: 1,
       repeat: Infinity,

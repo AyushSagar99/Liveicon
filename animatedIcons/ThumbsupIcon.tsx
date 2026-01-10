@@ -7,7 +7,8 @@ export function ThumbsupIcon({ size = 32 }: { size?: number }) {
       height={size}
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="white"
+      strokeWidth={2}
       whileHover={{
         scale: [0.5,1.15],
         stroke: "#2563eb",

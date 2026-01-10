@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useState } from "react";
 import { ICON_CODE } from "@/utils/iconCode";
 import { ICON_REGISTRY } from "@/utils/iconRegistry";
 
@@ -15,15 +14,7 @@ export function Modal({
   selectedIcon: IconName;
   children: React.ReactNode;
 }) {
-  const [copied, setCopied] = useState(false);
-
   const code = ICON_CODE[selectedIcon];
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(code);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1500);
-  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
@@ -47,27 +38,9 @@ export function Modal({
           </code>
         </div>
 
-        <pre
-        className="
-      bg-black
-      text-white
-      rounded-xl
-      p-4
-      text-xs
-      overflow-auto
-      max-h-64
-      select-text
-      "
->
+        <pre className="bg-black text-white rounded-xl p-4 text-xs overflow-auto max-h-64">
           <code>{code}</code>
         </pre>
-
-        <button
-          onClick={handleCopy}
-          className="w-full py-2 rounded-lg bg-black text-white text-sm hover:bg-black/80 transition"
-        >
-          {copied ? "Copied!" : "Copy code"}
-        </button>
       </div>
     </div>
   );

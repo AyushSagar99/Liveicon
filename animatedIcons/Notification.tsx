@@ -20,7 +20,8 @@ export function NotificationIcon({size =32}: {size?: number}) {
   height={size}
   viewBox="0 0 24 24"
   fill="none"
-  stroke="currentColor"
+  stroke="white"
+  strokeWidth={2}
 >
 
     <path d="M20 18.5011L18.349 7.93407C17.8603 4.80601 15.166 2.5 12 2.5C8.83398 2.5 6.13971 4.80601 5.65098 7.93407L4 18.5011" />

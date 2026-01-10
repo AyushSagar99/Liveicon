@@ -7,7 +7,7 @@ export function AlarmIcon({ size = 32 }: { size?: number }) {
       height={size}
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="white"
       style={{ originX: "50%", originY: "50%" }}
       whileHover={{
         rotate: [-12, 12, -8, 8, -4, 4, 0],
@@ -17,6 +17,7 @@ export function AlarmIcon({ size = 32 }: { size?: number }) {
         ease: "easeInOut",
         repeat: Infinity,
       }}
+      strokeWidth={2}
     >
       <path d="M20.5 12.5C20.5 17.1944 16.6944 21 12 21C7.30558 21 3.5 17.1944 3.5 12.5C3.5 7.80558 7.30558 4 12 4C16.6944 4 20.5 7.80558 20.5 12.5Z" />
       <path d="M5.88 18.7031L3.5 21.0031" />

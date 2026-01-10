@@ -30,9 +30,10 @@ export function DownloadIcon({ size = 32 }: { size?: number }) {
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      stroke="currentColor"
+      stroke="white"
       fill="none"
       whileHover="hover"
+      strokeWidth={2}
     >
 
       <motion.path

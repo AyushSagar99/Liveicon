@@ -4,16 +4,16 @@ import Link from 'next/link';
 
 function Navbar() {
   return (
-    <div className='flex justify-center items-center p-2 backdrop-blur-xl bg-purple-600/20  shadow-lg'>
-        <div className=' backdrop-blur-xl bg-white/20 border border-white/30 
-            rounded-xl  shadow-lg'>
-            <p className=' text-2xl'>Liveicons</p>
+    <div className='flex justify-center items-center p-2 backdrop-blur-xl bg-black/90  shadow-lg'>
+        <div className=' backdrop-blur-xl bg-white/20   
+            rounded-xl '>
+            <p className=' text-2xl text-white'>Liveicons</p>
         </div>
         <div className='flex justify-end items-end   absolute right-0 top-0 p-2'>
           <Link href="https://github.com/AyushSagar99/Liveicon" target='/'>
         <svg
         fill='none'
-        stroke='currentColor'
+        stroke='white'
         strokeWidth='1.5'
         width="34"
         height="34"

@@ -27,7 +27,7 @@ export function AddIcon({ size = 32 }: { size?: number }) {
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      stroke="currentColor"
+      stroke="white"
       fill="none"
       initial="initial"
       whileHover="finish"
@@ -35,6 +35,7 @@ export function AddIcon({ size = 32 }: { size?: number }) {
         duration: 0.4,
         ease: "easeInOut"
       }}
+      strokeWidth={2}
     >
 
       <motion.circle
