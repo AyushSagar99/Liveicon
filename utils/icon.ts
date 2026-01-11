@@ -1,4 +1,3 @@
-// utils/icon.ts
 import type { IconName } from "./iconRegistry";
 
 export const ICONS: { id: number; name: IconName }[] = [
@@ -20,4 +19,6 @@ export const ICONS: { id: number; name: IconName }[] = [
   { id: 16, name: "instagram" },
   { id: 17, name: "delete" },
   { id: 18, name: "lock" },
+  { id: 19, name: "location" },
+  { id: 20, name: "user" },
 ];

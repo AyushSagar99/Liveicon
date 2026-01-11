@@ -1,4 +1,3 @@
-// utils/iconRegistry.ts
 import { TaskIcon } from "@/animatedIcons/Task-Icon";
 import { TwitterIcon } from "@/animatedIcons/Twitter-Icon";
 import { StarIcon } from "@/animatedIcons/Star-Icon";
@@ -17,6 +16,8 @@ import { GithubIcon } from "@/animatedIcons/Github-Icon";
 import { InstagramIcon } from "@/animatedIcons/Instagram-Icon";
 import { DeleteIcon } from "@/animatedIcons/Delete-Icon";
 import { LockIcon } from "@/animatedIcons/Lock-Icon";
+import { LocationIcon } from "@/animatedIcons/Location-Icon";
+import { UserIcon } from "@/animatedIcons/User-Icon";
 
 export const ICON_REGISTRY = {
   task: TaskIcon,
@@ -36,7 +37,9 @@ export const ICON_REGISTRY = {
   github:GithubIcon,
   instagram:InstagramIcon,
   delete:DeleteIcon,
-  lock:LockIcon
+  lock:LockIcon,
+  location:LocationIcon,
+  user:UserIcon
 };
 
 export type IconName = keyof typeof ICON_REGISTRY;
