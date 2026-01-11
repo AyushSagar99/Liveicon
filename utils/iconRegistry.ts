@@ -12,6 +12,8 @@ import { AddIcon } from "@/animatedIcons/Add-Icon";
 import { AlarmIcon } from "@/animatedIcons/Alarm-Icon";
 import { SettingIcon } from "@/animatedIcons/Setting-Icon";
 import { LinkIcon } from "@/animatedIcons/Link-Icon";
+import { AppleIcon } from "@/animatedIcons/Apple-Icon";
+import { GithubIcon } from "@/animatedIcons/Github-Icon";
 
 export const ICON_REGISTRY = {
   task: TaskIcon,
@@ -26,7 +28,9 @@ export const ICON_REGISTRY = {
   add:AddIcon,
   alarm:AlarmIcon,
   setting:SettingIcon,
-  link:LinkIcon
+  link:LinkIcon,
+  apple:AppleIcon,
+  github:GithubIcon
 };
 
 export type IconName = keyof typeof ICON_REGISTRY;
