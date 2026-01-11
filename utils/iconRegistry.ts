@@ -14,6 +14,9 @@ import { SettingIcon } from "@/animatedIcons/Setting-Icon";
 import { LinkIcon } from "@/animatedIcons/Link-Icon";
 import { AppleIcon } from "@/animatedIcons/Apple-Icon";
 import { GithubIcon } from "@/animatedIcons/Github-Icon";
+import { InstagramIcon } from "@/animatedIcons/Instagram-Icon";
+import { DeleteIcon } from "@/animatedIcons/Delete-Icon";
+import { LockIcon } from "@/animatedIcons/Lock-Icon";
 
 export const ICON_REGISTRY = {
   task: TaskIcon,
@@ -30,7 +33,10 @@ export const ICON_REGISTRY = {
   setting:SettingIcon,
   link:LinkIcon,
   apple:AppleIcon,
-  github:GithubIcon
+  github:GithubIcon,
+  instagram:InstagramIcon,
+  delete:DeleteIcon,
+  lock:LockIcon
 };
 
 export type IconName = keyof typeof ICON_REGISTRY;
