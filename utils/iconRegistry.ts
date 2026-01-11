@@ -11,6 +11,7 @@ import { DownloadIcon } from "@/animatedIcons/Download-Icon";
 import { AddIcon } from "@/animatedIcons/Add-Icon";
 import { AlarmIcon } from "@/animatedIcons/Alarm-Icon";
 import { SettingIcon } from "@/animatedIcons/Setting-Icon";
+import { LinkIcon } from "@/animatedIcons/Link-Icon";
 
 export const ICON_REGISTRY = {
   task: TaskIcon,
@@ -24,7 +25,8 @@ export const ICON_REGISTRY = {
   download:DownloadIcon,
   add:AddIcon,
   alarm:AlarmIcon,
-  setting:SettingIcon
+  setting:SettingIcon,
+  link:LinkIcon
 };
 
 export type IconName = keyof typeof ICON_REGISTRY;
