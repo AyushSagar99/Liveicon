@@ -13,7 +13,7 @@ function Navbar() {
             h-16
             backdrop-blur-xl
             bg-black/70
-            border border-white/10
+            border border-white/20
             rounded-2xl
             shadow-lg
             mt-4

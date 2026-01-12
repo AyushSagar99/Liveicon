@@ -21,4 +21,6 @@ export const ICONS: { id: number; name: IconName }[] = [
   { id: 18, name: "lock" },
   { id: 19, name: "location" },
   { id: 20, name: "user" },
+  { id: 21, name: "accident" },
+  { id: 22, name: "compass" },
 ];

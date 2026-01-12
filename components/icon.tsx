@@ -17,7 +17,7 @@ type IconName = keyof typeof ICON_REGISTRY;
 export default function IconGrid() {
   return (
     <div className="select-none mx-auto max-w-[1200px] p-4">
-      <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 xl:grid-cols-10 gap-4">
+      <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 xl:grid-cols-8 gap-4">
         {ICONS.map(({ id, name }) => (
           <IconCard key={id} name={name} />
         ))}

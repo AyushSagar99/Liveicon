@@ -18,6 +18,8 @@ import { DeleteIcon } from "@/animatedIcons/Delete-Icon";
 import { LockIcon } from "@/animatedIcons/Lock-Icon";
 import { LocationIcon } from "@/animatedIcons/Location-Icon";
 import { UserIcon } from "@/animatedIcons/User-Icon";
+import { AccidentIcon } from "@/animatedIcons/Accident-Icon";
+import { CompassIcon } from "@/animatedIcons/Compass-Icon";
 
 export const ICON_REGISTRY = {
   task: TaskIcon,
@@ -39,7 +41,9 @@ export const ICON_REGISTRY = {
   delete:DeleteIcon,
   lock:LockIcon,
   location:LocationIcon,
-  user:UserIcon
+  user:UserIcon,
+  accident:AccidentIcon,
+  compass:CompassIcon
 };
 
 export type IconName = keyof typeof ICON_REGISTRY;
