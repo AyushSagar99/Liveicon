@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-function TickIcon({size=32}:{size?: number}) {
+function TickIcon({size=20}:{size?: number}) {
   return (
     <motion.svg
     width={size}
@@ -8,6 +8,7 @@ function TickIcon({size=32}:{size?: number}) {
     viewBox='0 0 24 24'
     fill='none'
     stroke='green'
+    strokeWidth={2}
     whileHover={{
         pathLength:[0,1]
     }}
