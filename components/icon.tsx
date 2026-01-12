@@ -61,10 +61,10 @@ function IconCard({ name }: { name: IconName }) {
         "
       >
         {copied ? <TickIcon/> :<Tooltip>
-      <TooltipTrigger >
+      <TooltipTrigger delay={0}>
          <Copy/>
       </TooltipTrigger>
-      <TooltipPopup>Copy tsx file</TooltipPopup>
+      <TooltipPopup>copy tsx file</TooltipPopup>
     </Tooltip>}
       </button>
     </div>
