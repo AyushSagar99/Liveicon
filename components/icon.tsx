@@ -6,6 +6,11 @@ import { ICON_REGISTRY } from "@/utils/iconRegistry";
 import { ICON_CODE } from "@/utils/iconCode";
 import { Copy } from "@/animatedIcons/Copy";
 import TickIcon from "@/animatedIcons/Tick-Icon";
+import {
+  Tooltip,
+  TooltipPopup,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 type IconName = keyof typeof ICON_REGISTRY;
 
@@ -55,7 +60,12 @@ function IconCard({ name }: { name: IconName }) {
           
         "
       >
-        {copied ? <TickIcon/> : <Copy/>}
+        {copied ? <TickIcon/> :<Tooltip>
+      <TooltipTrigger >
+         <Copy/>
+      </TooltipTrigger>
+      <TooltipPopup>Copy tsx file</TooltipPopup>
+    </Tooltip>}
       </button>
     </div>
   );
