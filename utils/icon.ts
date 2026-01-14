@@ -2,10 +2,13 @@ import type { IconName } from "./iconRegistry";
 
 export const ICONS: { id: number; name: IconName }[] = [
   { id: 1, name: "twitter" },
+  { id: 5, name: "youtube" },
+  { id: 14, name: "apple" },
+  { id: 15, name: "github" },
+  { id: 16, name: "instagram" },
   { id: 2, name: "task" },
   { id: 3, name: "star" },
   { id: 4, name: "thumbsup" },
-  { id: 5, name: "youtube" },
   { id: 6, name: "search" },
   { id: 7, name: "notification" },
   { id: 8, name: "faviourate" },
@@ -14,9 +17,7 @@ export const ICONS: { id: number; name: IconName }[] = [
   { id: 11, name: "alarm" },
   { id: 12, name: "setting" },
   { id: 13, name: "link" },
-  { id: 14, name: "apple" },
-  { id: 15, name: "github" },
-  { id: 16, name: "instagram" },
+
   { id: 17, name: "delete" },
   { id: 18, name: "lock" },
   { id: 19, name: "location" },
@@ -25,4 +26,6 @@ export const ICONS: { id: number; name: IconName }[] = [
   { id: 22, name: "compass" },
   { id: 23, name: "activity" },
   { id: 24, name: "square" },
+  { id: 25, name: "comment" },
+  { id: 26, name: "camera" },
 ];

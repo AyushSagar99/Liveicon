@@ -22,6 +22,8 @@ import { AccidentIcon } from "@/animatedIcons/Accident-Icon";
 import { CompassIcon } from "@/animatedIcons/Compass-Icon";
 import { ActivityIcon } from "@/animatedIcons/Activity-Icon";
 import { SquareIcon } from "@/animatedIcons/Square-Icon";
+import { CommentIcon } from "@/animatedIcons/Comment-Icon";
+import { CameraIcon } from "@/animatedIcons/Camera-Icon";
 
 export const ICON_REGISTRY = {
   task: TaskIcon,
@@ -47,7 +49,9 @@ export const ICON_REGISTRY = {
   accident:AccidentIcon,
   compass:CompassIcon,
   activity:ActivityIcon,
-  square:SquareIcon
+  square:SquareIcon,
+  comment:CommentIcon,
+  camera:CameraIcon
 };
 
 export type IconName = keyof typeof ICON_REGISTRY;
