@@ -24,6 +24,10 @@ import { ActivityIcon } from "@/animatedIcons/Activity-Icon";
 import { SquareIcon } from "@/animatedIcons/Square-Icon";
 import { CommentIcon } from "@/animatedIcons/Comment-Icon";
 import { CameraIcon } from "@/animatedIcons/Camera-Icon";
+import { BatteryFullIcon } from "@/animatedIcons/BatteryFull-Icon";
+import { BookmarkIcon } from "@/animatedIcons/Bookmark-Icon";
+import { ClockIcon } from "@/animatedIcons/Clock-Icon";
+import { MailIcon } from "@/animatedIcons/Mail-Icon";
 
 export const ICON_REGISTRY = {
   task: TaskIcon,
@@ -51,7 +55,11 @@ export const ICON_REGISTRY = {
   activity:ActivityIcon,
   square:SquareIcon,
   comment:CommentIcon,
-  camera:CameraIcon
+  camera:CameraIcon,
+  battery:BatteryFullIcon,
+  bookmark:BookmarkIcon,
+  clock:ClockIcon,
+  mail:MailIcon
 };
 
 export type IconName = keyof typeof ICON_REGISTRY;
