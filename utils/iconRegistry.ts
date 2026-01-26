@@ -28,6 +28,7 @@ import { BatteryFullIcon } from "@/animatedIcons/BatteryFull-Icon";
 import { BookmarkIcon } from "@/animatedIcons/Bookmark-Icon";
 import { ClockIcon } from "@/animatedIcons/Clock-Icon";
 import { MailIcon } from "@/animatedIcons/Mail-Icon";
+import { AirplaneIcon } from "@/animatedIcons/Airplane-Icon";
 
 export const ICON_REGISTRY = {
   task: TaskIcon,
@@ -59,7 +60,8 @@ export const ICON_REGISTRY = {
   battery:BatteryFullIcon,
   bookmark:BookmarkIcon,
   clock:ClockIcon,
-  mail:MailIcon
+  mail:MailIcon,
+  airplane:AirplaneIcon
 };
 
 export type IconName = keyof typeof ICON_REGISTRY;
