@@ -43,7 +43,7 @@ function IconCard({ name }: { name: IconName }) {
     <div
       className="
         relative group
-        backdrop-blur-xl bg-black/20 border border-white/30
+        backdrop-blur-xl bg-black/20 border border-white/10
         rounded-xl p-8 shadow-lg
         flex items-center justify-center
         transition-all duration-200        
