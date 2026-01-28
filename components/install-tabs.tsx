@@ -24,7 +24,7 @@ export default function InstallTabs() {
     };
 
     return (
-        <div className="w-full max-w-xl mx-auto lg:mr-0 lg:ml-auto">
+        <div className="lg:w-[500px] max-w-xl mx-auto lg:mr-0 lg:ml-auto">
             <div className="rounded-xl border border-zinc-800 bg-[#0A0A0A] overflow-hidden shadow-2xl">
                 <div className="flex items-center justify-between px-4 py-3 bg-[#0A0A0A]">
                     <div className="flex space-x-4">
@@ -68,7 +68,7 @@ export default function InstallTabs() {
                             transition={{ duration: 0.2 }}
                             className="text-zinc-400 overflow-x-auto selection:bg-zinc-800 selection:text-white pr-10 leading-relaxed break-all"
                         >
-                            <span className="text-[#a16207] mr-2">$</span>
+                            <span className="text-zinc-600 mr-2">$</span>
                             {commands[manager]}
                         </motion.div>
                     </AnimatePresence>

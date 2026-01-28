@@ -19,20 +19,11 @@ export default function Home() {
           <div className="w-full lg:w-auto">
             <InstallTabs />
           </div>
-
-          
         </div>
-        {/* Mobile view needed? The user said "right side", implying desktop. 
-               For mobile, we might want it to stack. 
-               The hidden lg:block hides it on mobile. 
-               Let's make it visible on all, but order changes.
-           */}
       </div>
       <div className="mt-16">
             <Icon />
           </div>
-
-      {/* Re-doing the grid to ensure it shows on mobile too, stacking correctly */}
     </div>
   );
 }
