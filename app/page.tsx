@@ -1,28 +1,38 @@
 import Icon from "@/components/icon";
+import InstallTabs from "@/components/install-tabs";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-zinc-900 to-black">
-      <div className="mx-auto w-screen px-6 pt-24 text-center">
-        
-        <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
-          Icons that move.
-          <br />
-          <span className="text-zinc-400">
-            Interfaces that feel alive.
-          </span>
-        </h1>
+      <div className="mx-auto container px-6 pt-24">
+        <div className="flex flex-col lg:flex-row justify-between gap-12 items-center">
+          <div className="text-left max-w-2xl">
+            <h1 className="text-zinc-200 text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.1]">
+              Icons that move.<span className="text-zinc-400 font-mono">Interfaces that feel alive.</span>
+            </h1>
 
-        <p className="mt-6 text-zinc-400 text-base sm:text-lg max-w-2xl mx-auto">
-          A growing animated icon library built with SVG and Framer-Motion 
-          designed for modern web interfaces.
-        </p>
+            <p className="mt-8 text-zinc-500 text-base sm:text-lg font-mono">
+              A growing animated icon library built with SVG and Framer-Motion designed for modern web interfaces.
+            </p>
 
-        <div className="mt-16">
-          <Icon />
+          </div>
+          <div className="w-full lg:w-auto">
+            <InstallTabs />
+          </div>
+
+          
         </div>
-
+        {/* Mobile view needed? The user said "right side", implying desktop. 
+               For mobile, we might want it to stack. 
+               The hidden lg:block hides it on mobile. 
+               Let's make it visible on all, but order changes.
+           */}
       </div>
+      <div className="mt-16">
+            <Icon />
+          </div>
+
+      {/* Re-doing the grid to ensure it shows on mobile too, stacking correctly */}
     </div>
   );
 }
