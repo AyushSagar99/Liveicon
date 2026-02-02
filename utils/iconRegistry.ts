@@ -29,6 +29,9 @@ import { BookmarkIcon } from "@/animatedIcons/Bookmark-Icon";
 import { ClockIcon } from "@/animatedIcons/Clock-Icon";
 import { MailIcon } from "@/animatedIcons/Mail-Icon";
 import { AirplaneIcon } from "@/animatedIcons/Airplane-Icon";
+import { AirplaneOffIcon } from "@/animatedIcons/Airplane-Off";
+import { AirdropIcon } from "@/animatedIcons/Airdrop-Icon";
+import { AmazonIcon } from "@/animatedIcons/Amazon-Icon";
 
 export const ICON_REGISTRY = {
   task: TaskIcon,
@@ -61,7 +64,10 @@ export const ICON_REGISTRY = {
   bookmark:BookmarkIcon,
   clock:ClockIcon,
   mail:MailIcon,
-  airplane:AirplaneIcon
+  airplane:AirplaneIcon,
+  airplaneOff:AirplaneOffIcon,
+  airdrop:AirdropIcon,
+  amazon:AmazonIcon,
 };
 
 export type IconName = keyof typeof ICON_REGISTRY;
