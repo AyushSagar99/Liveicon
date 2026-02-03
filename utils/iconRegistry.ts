@@ -37,6 +37,7 @@ import { AndroidIcon } from "@/animatedIcons/Android-Icon";
 import { AnonymousIcon } from "@/animatedIcons/Anonymous-Icon";
 import { BitcoinWalletIcon } from "@/animatedIcons/BitcoinWallet-Icon";
 import { MiningIcon } from "@/animatedIcons/Mining-Icon";
+import { EthereumIcon } from "@/animatedIcons/Ethereum-Icon";
 
 export const ICON_REGISTRY = {
   task: TaskIcon,
@@ -78,6 +79,7 @@ export const ICON_REGISTRY = {
   anonymous:AnonymousIcon,
   bitcoinwallet:BitcoinWalletIcon,
   mining:MiningIcon,
+  ethereum:EthereumIcon,
 };
 
 export type IconName = keyof typeof ICON_REGISTRY;
