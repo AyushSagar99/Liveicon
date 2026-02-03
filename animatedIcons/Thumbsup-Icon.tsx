@@ -12,6 +12,7 @@ export function ThumbsupIcon({ size = 32 }: { size?: number }) {
       whileHover={{
         rotate:[30,0]
       }}
+      initial={{rotate:0}}
       transition={{
         type: "spring",
         stiffness: 300,

@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "LiveIcons",
+  icons:"/liveicon.ico",
   description: "Animated Icons library",
 };
 

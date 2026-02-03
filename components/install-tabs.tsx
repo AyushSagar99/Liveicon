@@ -75,7 +75,7 @@ export default function InstallTabs() {
 
                     <button
                         onClick={handleCopy}
-                        className="ml-4 p-1.5 rounded-md hover:bg-zinc-800/50 text-zinc-600 hover:text-zinc-400 transition-colors shrink-0"
+                        className="ml-4 p-1.5 rounded-md text-zinc-400 transition-colors shrink-0"
                         aria-label="Copy command"
                     >
                         <AnimatePresence mode="wait" initial={false}>

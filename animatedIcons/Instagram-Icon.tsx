@@ -21,6 +21,7 @@ export function InstagramIcon({size=32}:{size?: number}) {
     variants={{
         hover:{opacity:[0,1]}
     }}
+    initial={{opacity:1}}
     transition={{
         duration:0.5
     }}

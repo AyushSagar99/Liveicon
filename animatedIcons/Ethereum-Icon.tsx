@@ -10,6 +10,7 @@ export function EthereumIcon() {
       fill="none"
       stroke="#ffffff"
       strokeWidth="1.5"
+      initial={{rotate:0}}
       whileHover={{ y: -4, rotate: [6,-6] }}
       transition={{ duration: 0.35, ease: "easeOut" }}
     >

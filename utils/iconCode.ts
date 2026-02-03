@@ -14,6 +14,7 @@ export function ThumbsupIcon({ size = 32 }: { size?: number }) {
       whileHover={{
         rotate:[30,0]
       }}
+      initial={{rotate:0}}
       transition={{
         type: "spring",
         stiffness: 300,
@@ -538,7 +539,7 @@ export function InstagramIcon({size=32}:{size?: number}) {
     viewBox='0 0 24 24'
     fill='none'
     stroke='white'
-    strokeWidth={1.5}
+    strokeWidth={2}
     whileHover='hover'
     >
     <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" />
@@ -551,6 +552,7 @@ export function InstagramIcon({size=32}:{size?: number}) {
     variants={{
         hover:{opacity:[0,1]}
     }}
+    initial={{opacity:1}}
     transition={{
         duration:0.5
     }}
@@ -1175,6 +1177,7 @@ export function EthereumIcon() {
       fill="none"
       stroke="#ffffff"
       strokeWidth="1.5"
+      initial={{rotate:0}}
       whileHover={{ y: -4, rotate: [6,-6] }}
       transition={{ duration: 0.35, ease: "easeOut" }}
     >
