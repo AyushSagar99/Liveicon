@@ -35,4 +35,9 @@ export const ICONS: { id: number; name: IconName }[] = [
   { id: 32, name: "airplaneOff" },
   { id: 33, name: "airdrop" },
   { id: 34, name: "amazon" },
+  { id: 35, name: "ballons" },
+  { id: 36, name: "android" },
+  { id: 37, name: "anonymous" },
+  { id: 38, name: "bitcoinwallet" },
+  { id: 39, name: "mining" },
 ];

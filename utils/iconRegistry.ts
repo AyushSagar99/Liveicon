@@ -32,6 +32,11 @@ import { AirplaneIcon } from "@/animatedIcons/Airplane-Icon";
 import { AirplaneOffIcon } from "@/animatedIcons/Airplane-Off";
 import { AirdropIcon } from "@/animatedIcons/Airdrop-Icon";
 import { AmazonIcon } from "@/animatedIcons/Amazon-Icon";
+import { BallonsIcon } from "@/animatedIcons/Ballons-Icon";
+import { AndroidIcon } from "@/animatedIcons/Android-Icon";
+import { AnonymousIcon } from "@/animatedIcons/Anonymous-Icon";
+import { BitcoinWalletIcon } from "@/animatedIcons/BitcoinWallet-Icon";
+import { MiningIcon } from "@/animatedIcons/Mining-Icon";
 
 export const ICON_REGISTRY = {
   task: TaskIcon,
@@ -68,6 +73,11 @@ export const ICON_REGISTRY = {
   airplaneOff:AirplaneOffIcon,
   airdrop:AirdropIcon,
   amazon:AmazonIcon,
+  ballons:BallonsIcon,
+  android:AndroidIcon,
+  anonymous:AnonymousIcon,
+  bitcoinwallet:BitcoinWalletIcon,
+  mining:MiningIcon,
 };
 
 export type IconName = keyof typeof ICON_REGISTRY;

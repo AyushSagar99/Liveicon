@@ -1041,5 +1041,126 @@ export function AmazonIcon() {
     </div>
   )
 }`.trim(),
+ballons:`
+import { easeInOut, motion } from "framer-motion";
+
+export function BallonsIcon() {
+  return (
+    <div>
+        <motion.svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none" stroke="#ffffff" strokeWidth="1.5" 
+        whileHover={{ y: -6, scale: 1.05 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        >
+            <path d="M15.5 6.5C15.5 8.98528 13.933 11 12 11C10.067 11 8.5 8.98528 8.5 6.5C8.5 4.01472 10.067 2 12 2C13.933 2 15.5 4.01472 15.5 6.5Z" />
+            <path d="M22 15.5C22 17.9853 20.433 20 18.5 20C16.567 20 15 17.9853 15 15.5C15 13.0147 16.567 11 18.5 11C20.433 11 22 13.0147 22 15.5Z" />
+            <path d="M11.9978 11C11.9978 11 12.6526 13 11.9985 15C10.4013 19.8831 12.0001 22 12.0001 22" />
+            <path d="M18.5 20C18.5 20.5 18.4 21.6 18 22" />
+            <path d="M2 15.5C2 17.9853 3.567 20 5.5 20C7.433 20 9 17.9853 9 15.5C9 13.0147 7.433 11 5.5 11C3.567 11 2 13.0147 2 15.5Z" />
+            <path d="M5.5 20C5.5 20.5 5.6 21.6 6 22" />
+        </motion.svg>
+    </div>
+  )
+}`.trim(),
+android:`
+import { motion } from "framer-motion";
+
+export function AndroidIcon() {
+  return (
+    <div>
+        <motion.svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none" stroke="#ffffff" strokeWidth="1.5"
+         whileHover="hover"
+          transition={{
+            duration: 0.2,
+            ease: "easeInOut",
+          }}
+        >
+            <path d="M6.5 9.5C6.5 6.46243 8.96243 4 12 4C15.0376 4 17.5 6.46243 17.5 9.5V16C17.5 17.4142 17.5 18.1213 17.0607 18.5607C16.6213 19 15.9142 19 14.5 19H9.5C8.08579 19 7.37868 19 6.93934 18.5607C6.5 18.1213 6.5 17.4142 6.5 16V9.5Z" />
+            <motion.path 
+            variants={{ hover:{rotate: [0, -82, 0]}}}
+            d="M20 11V17" />
+            <path d="M15 19V22" />
+            <path d="M9 19V22" />
+            <path d="M4 11V17" />
+            <path d="M10 4L8.5 2M14 4L15.5 2" />
+            <path d="M6.5 10H17.5" />
+        </motion.svg>
+    </div>
+  )
+}`.trim(),
+anonymous:`
+import { motion } from "framer-motion";
+
+export function AnonymousIcon() {
+  return (
+    <div>
+        <motion.svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+        whileHover="hover"
+        >
+            <path d="M7 14.9999C5.34315 14.9999 4 16.343 4 17.9999C4 19.6567 5.34315 20.9999 7 20.9999C8.65685 20.9999 10 19.6567 10 17.9999C10 16.343 8.65685 14.9999 7 14.9999Z" />
+            <path d="M17 14.9999C15.3431 14.9999 14 16.343 14 17.9999C14 19.6567 15.3431 20.9999 17 20.9999C18.6569 20.9999 20 19.6567 20 17.9999C20 16.343 18.6569 14.9999 17 14.9999Z" />
+            <path d="M14 17H10" />
+            <motion.path variants={{hover:{rotate:[0,-10,0]}}} d="M22 12.9999C19.5434 11.7724 15.9734 10.9999 12 10.9999C8.02658 10.9999 4.45659 11.7724 2 12.9999" />
+            <motion.path variants={{hover:{rotate:[0,-10,0]}}} d="M19 11.4999L17.9425 4.71233C17.7268 3.32807 16.2232 2.578 15.0093 3.24907L14.3943 3.58903C12.9019 4.414 11.0981 4.414 9.60574 3.58903L8.99074 3.24907C7.77676 2.578 6.27318 3.32808 6.05751 4.71233L5 11.4999" />
+        </motion.svg>
+    </div>
+  )
+}`.trim(),
+bitcoinwallet:`
+import { motion } from "framer-motion";
+
+export function BitcoinWalletIcon() {
+  return (
+    <motion.svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width="40"
+      height="40"
+      fill="none"
+      stroke="#ffffff"
+      strokeWidth="1.5"
+      whileHover="hover"
+      variants={{
+        hover: { y: -4, scale: 1.04 },
+      }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+    >
+      {/* Coin */}
+      <motion.path
+        d="M16 13C16 13.8284 16.6716 14.5 17.5 14.5C18.3284 14.5 19 13.8284 19 13C19 12.1716 18.3284 11.5 17.5 11.5C16.6716 11.5 16 12.1716 16 13Z"
+        variants={{
+          hover: { scale: 1.15 },
+        }}
+        transition={{ duration: 0.25, ease: "easeOut" }}
+        style={{ transformOrigin: "center" }}
+      />
+
+      {/* Wallet body */}
+      <path d="M11 19H16C18.8284 19 20.2426 19 21.1213 18.1213C22 17.2426 22 15.8284 22 13V12C22 9.17157 22 7.75736 21.1213 6.87868C20.48 6.23738 19.5534 6.06413 18 6.01732M10 6H16C16.7641 6 17.425 6 18 6.01732M2 10C2 6.22876 2 5.34315 3.17157 4.17157C4.34315 3 6.22876 3 10 3H14.9827C15.9308 3 16.4049 3 16.7779 3.15749C17.2579 3.36014 17.6399 3.7421 17.8425 4.22208C18 4.5951 18 5.06917 18 6.01732" />
+
+      {/* Bitcoin symbol */}
+      <motion.path variants={{hover:{stroke:"#F5C542"} }} initial={{stroke:"#ffffff"}} d="M3.125 19.5L3.125 13.5M5 13.5V12M5 21V19.5M3.125 16.5H6.875M6.875 16.5C7.49632 16.5 8 17.0037 8 17.625V18.375C8 18.9963 7.49632 19.5 6.875 19.5H2M6.875 16.5C7.49632 16.5 8 15.9963 8 15.375V14.625C8 14.0037 7.49632 13.5 6.875 13.5H2" />
+    </motion.svg>
+  );
+}`.trim(),
+mining:`
+import { motion } from "framer-motion";
+
+export function MiningIcon() {
+  return (
+        <motion.svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none" stroke="#ffffff" strokeWidth="1.5"
+        whileHover="hover"
+        >
+            <path d="M16.9445 20.6667V15.3333M18.5052 15.3333V14M18.5052 22V20.6667M16.9445 18H20.0658M20.0658 18C20.5829 18 21.0021 18.4477 21.0021 19V19.6667C21.0021 20.219 20.5829 20.6667 20.0658 20.6667H16.0082M20.0658 18C20.5829 18 21.0021 17.5523 21.0021 17V16.3333C21.0021 15.781 20.5829 15.3333 20.0658 15.3333H16.0082" />
+            <motion.path d="M14.6956 4.18605C13.2951 3.31449 9.70074 1.64154 6.46298 2.06854C8.42149 3.43854 9.45182 4.17541 12.2314 6.68896M18.5673 8.11851C18.9392 8.73509 19.5616 9.92878 19.9974 11.1718M16.103 10.6214C16.3448 10.8972 16.6389 11.3118 16.8495 11.5563M10.3551 10.4183L3.41468 17.4677C2.85171 18.0395 2.86017 18.9751 3.43357 19.5575C4.00696 20.1399 4.92816 20.1485 5.49113 19.5767L12.4315 12.5274M11.8454 8.22564L14.5901 11.0134C14.8948 11.3229 15.3878 11.3241 15.6912 11.0159L19.0915 7.5622C19.3949 7.25405 19.3938 6.75331 19.089 6.44376L16.3444 3.65604C16.0396 3.34649 15.5466 3.34535 15.2432 3.6535L11.8429 7.10721C11.5395 7.41535 11.5407 7.91609 11.8454 8.22564Z"
+            variants={{hover: { rotate: [-15, 0] }}}
+            transition={{
+            type: "spring",
+            stiffness: 250,
+            damping: 18,
+            repeat:Infinity}}
+            style={{ transformOrigin: "50% 50%" }}/>        
+            </motion.svg>
+  )
+}`.trim(),
   };
   
