@@ -119,11 +119,13 @@ function StepCard({
   step,
   title,
   description,
+  icon,
   delay,
 }: {
   step: number;
   title: string;
   description: string;
+  icon: React.ReactNode;
   delay: number;
 }) {
   return (
@@ -135,11 +137,14 @@ function StepCard({
       viewport={{ once: true }}
       custom={delay}
     >
-      <div className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-sm font-bold text-zinc-300 mb-4">
-        {step}
+      <div className="w-16 h-16 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center mb-5 relative">
+        <span className="text-zinc-300">{icon}</span>
+        <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-white/10 border border-white/20 text-[11px] font-bold text-zinc-400 flex items-center justify-center font-mono">
+          {step}
+        </span>
       </div>
       <h3 className="text-lg font-semibold text-zinc-200 mb-2">{title}</h3>
-      <p className="text-sm text-zinc-500 max-w-xs">{description}</p>
+      <p className="text-sm text-zinc-500 max-w-[220px] leading-relaxed">{description}</p>
     </motion.div>
   );
 }
@@ -232,9 +237,13 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="mx-auto max-w-5xl px-6 py-24">
+      <section className="relative mx-auto max-w-5xl px-6 py-24">
+        {/* Decorative glow */}
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[400px] h-[400px] bg-purple-500/[0.03] rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-blue-500/[0.03] rounded-full blur-3xl pointer-events-none" />
+
         <motion.div
-          className="text-center mb-16"
+          className="relative text-center mb-16"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -249,7 +258,7 @@ export default function Home() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <FeatureCard
             icon="🎬"
             title="Smooth Animations"
@@ -290,65 +299,83 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="mx-auto max-w-4xl px-6 py-20">
+      <section className="relative mx-auto max-w-4xl px-6 py-20">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-14"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           custom={0}
         >
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs font-mono text-zinc-500 mb-4">
+            How it works
+          </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-zinc-200">
             Three steps. That&apos;s it.
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="relative grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+          {/* Connecting lines (desktop only) */}
+          <div className="hidden md:block absolute top-8 left-[calc(16.66%+32px)] right-[calc(16.66%+32px)] h-[1px]">
+            <motion.div
+              className="h-full w-full border-t border-dashed border-white/10"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            />
+          </div>
+
           <StepCard
             step={1}
             title="Browse"
             description="Explore the collection and find the icon that fits your UI."
+            icon={
+              <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" strokeLinecap="round" />
+              </svg>
+            }
             delay={0}
           />
           <StepCard
             step={2}
             title="Copy"
             description="Click the copy button to grab the TSX component code instantly."
+            icon={
+              <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                <rect x="9" y="9" width="11" height="11" rx="2" />
+                <path d="M5 15V5a2 2 0 0 1 2-2h10" strokeLinecap="round" />
+              </svg>
+            }
             delay={1}
           />
           <StepCard
             step={3}
             title="Paste & Ship"
             description="Drop it into your React project. It works with Framer Motion out of the box."
+            icon={
+              <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
+                <polyline points="13 2 13 9 20 9" />
+              </svg>
+            }
             delay={2}
           />
         </div>
       </section>
 
-      {/* Icon Grid */}
-      <section id="icons" className="py-20">
-        <motion.div
-          className="text-center mb-12"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          custom={0}
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold text-zinc-200">
-            Icon Collection
-          </h2>
-          <p className="mt-4 text-zinc-500 font-mono text-sm">
-            Hover to preview. Click copy to grab the code.
-          </p>
-        </motion.div>
-        {/* <Icon /> */}
-      </section>
-
       {/* CTA */}
-      <section className="mx-auto max-w-3xl px-6 py-24 text-center">
+      <section className="relative mx-auto max-w-3xl px-6 py-20">
+        {/* Glow behind the card */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="w-[500px] h-[300px] bg-gradient-to-r from-purple-500/[0.06] via-blue-500/[0.06] to-cyan-500/[0.06] rounded-full blur-3xl" />
+        </div>
+
         <motion.div
+          className="relative rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-sm p-12 text-center"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
