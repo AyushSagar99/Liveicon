@@ -14,14 +14,24 @@ import {
 
 type IconName = keyof typeof ICON_REGISTRY;
 
-export default function IconGrid() {
+export default function IconGrid({ filter = "" }: { filter?: string }) {
+  const filtered = filter
+    ? ICONS.filter(({ name }) => name.toLowerCase().includes(filter.toLowerCase()))
+    : ICONS;
+
   return (
     <div className="select-none mx-auto max-w-[1200px] p-4 pb-8">
-      <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 xl:grid-cols-8 gap-4">
-        {ICONS.map(({ id, name }) => (
-          <IconCard key={id} name={name} />
-        ))}
-      </div>
+      {filtered.length === 0 ? (
+        <div className="text-center py-16">
+          <p className="text-zinc-500 font-mono text-sm">No icons found for &quot;{filter}&quot;</p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 xl:grid-cols-8 gap-4">
+          {filtered.map(({ id, name }) => (
+            <IconCard key={id} name={name} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
