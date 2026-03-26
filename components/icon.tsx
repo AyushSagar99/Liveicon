@@ -53,10 +53,10 @@ function IconCard({ name }: { name: IconName }) {
     <div
       className="
         relative group
-        backdrop-blur-xl bg-black/20 border border-white/10
+        bg-[#111111] border border-[#1c1c1c] hover:border-[#2a2a2a] hover:bg-[#161616]
         rounded-xl p-8 shadow-lg
         flex items-center justify-center
-        transition-all duration-200        
+        transition-all duration-200
       "
     >
       <Icon size={40} />

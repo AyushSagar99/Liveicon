@@ -12,8 +12,8 @@ function Navbar() {
             flex items-center justify-between
             h-16
             backdrop-blur-xl
-            bg-black/70
-            border border-white/20
+            bg-[#0a0a0a]/80
+            border border-[#1f1f1f]
             rounded-2xl
             shadow-lg
             mt-4

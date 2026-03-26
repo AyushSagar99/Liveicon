@@ -25,8 +25,8 @@ export default function InstallTabs() {
 
     return (
         <div className="lg:w-[500px] max-w-xl mx-auto lg:mr-0 lg:ml-auto">
-            <div className="rounded-xl border border-zinc-800 bg-[#0A0A0A] overflow-hidden shadow-2xl">
-                <div className="flex items-center justify-between px-4 py-3 bg-[#0A0A0A]">
+            <div className="rounded-xl border border-[#1a1a1a] bg-[#0c0c0c] overflow-hidden shadow-2xl">
+                <div className="flex items-center justify-between px-4 py-3 bg-[#111111]">
                     <div className="flex space-x-4">
                         {(["pnpm", "npm", "yarn"] as packageManager[]).map((tab) => (
                             <button
