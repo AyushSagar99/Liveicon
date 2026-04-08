@@ -17,6 +17,11 @@ export function TwitterIcon({ size = 32 }: { size?: number }) {
        opacity: [1, 0.5, 1],
        
      }}
+     whileTap={{
+       pathLength: [0, 0, 0],
+       opacity: [1, 0.5, 1],
+       
+     }}
      transition={{
        duration: 1,
        ease: "easeInOut",

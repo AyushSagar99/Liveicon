@@ -6,6 +6,9 @@ export function LocationIcon({size=32}:{size?: number}) {
     whileHover={{
         y:[-3,0]
     }}
+    whileTap={{
+        y:[-3,0]
+    }}
     transition={{
         type:spring,
         stiffness:600,

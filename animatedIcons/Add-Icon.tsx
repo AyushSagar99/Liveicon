@@ -31,6 +31,7 @@ export function AddIcon({ size = 32 }: { size?: number }) {
       fill="none"
       initial="initial"
       whileHover="finish"
+      whileTap="finish"
       transition={{
         duration: 0.4,
         ease: "easeInOut"

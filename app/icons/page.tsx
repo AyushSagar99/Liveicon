@@ -13,7 +13,7 @@ export default function Icons() {
   return (
     <div className="min-h-screen bg-[#080808]">
       {/* Header */}
-      <section className="mx-auto max-w-[1200px] px-6 pt-28 pb-8">
+      <section className="mx-auto max-w-[1200px] px-4 pt-24 pb-6 sm:px-6 sm:pt-28 sm:pb-8">
         <motion.div
           className="flex flex-col md:flex-row md:items-end justify-between gap-6"
           initial={{ opacity: 0, y: 20 }}
@@ -21,11 +21,16 @@ export default function Icons() {
           transition={{ duration: 0.5 }}
         >
           <div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-zinc-200 tracking-tight">
+            <h1 className="text-3xl min-[420px]:text-4xl sm:text-5xl font-bold text-zinc-200 tracking-tight">
               Icon Collection
             </h1>
-            <p className="mt-3 text-zinc-500 font-mono text-sm max-w-md">
-              {totalIcons} animated icons. Hover to preview. Click copy to grab the TSX code.
+            <p className="mt-3 text-zinc-500 font-mono text-sm max-w-md leading-relaxed">
+              <span className="md:hidden">
+                {totalIcons} animated icons. Tap play on a card to run its animation.
+              </span>
+              <span className="hidden md:inline">
+                {totalIcons} animated icons. Hover to preview. Click copy to grab the TSX code.
+              </span>
             </p>
           </div>
 
@@ -56,7 +61,7 @@ export default function Icons() {
       </section>
 
       {/* Icon Grid */}
-      <section className="pb-20">
+      <section className="pb-12 sm:pb-20">
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}

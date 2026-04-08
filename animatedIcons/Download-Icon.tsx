@@ -33,6 +33,7 @@ export function DownloadIcon({ size = 32 }: { size?: number }) {
       stroke="white"
       fill="none"
       whileHover="hover"
+      whileTap="hover"
       strokeWidth={2}
     >
 

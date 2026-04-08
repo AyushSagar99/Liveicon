@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { Play } from "lucide-react";
 import { ICONS } from "@/utils/icon";
 import { ICON_REGISTRY } from "@/utils/iconRegistry";
 import { ICON_CODE } from "@/utils/iconCode";
@@ -12,6 +13,51 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
+function getAnimatedRoot(container: HTMLElement): SVGElement | null {
+  const first = container.firstElementChild;
+  if (!first) return null;
+  if (first.tagName === "DIV") {
+    return first.querySelector("svg");
+  }
+  return first instanceof SVGElement ? first : null;
+}
+
+function dispatchSyntheticTapAtIconCenter(container: HTMLElement) {
+  const root = getAnimatedRoot(container);
+  if (!root) return;
+  const rect = root.getBoundingClientRect();
+  const x = rect.left + rect.width / 2;
+  const y = rect.top + rect.height / 2;
+  let target: Element | null = document.elementFromPoint(x, y);
+  if (!target || !root.contains(target)) {
+    target = root;
+  }
+  const el = target as HTMLElement | SVGElement;
+  const init: PointerEventInit = {
+    bubbles: true,
+    cancelable: true,
+    clientX: x,
+    clientY: y,
+    pointerId: 1,
+    pointerType: "touch",
+    isPrimary: true,
+    width: 1,
+    height: 1,
+    pressure: 0.5,
+    button: 0,
+    buttons: 1,
+  };
+  el.dispatchEvent(new PointerEvent("pointerdown", init));
+  requestAnimationFrame(() => {
+    el.dispatchEvent(
+      new PointerEvent("pointerup", {
+        ...init,
+        buttons: 0,
+      })
+    );
+  });
+}
+
 type IconName = keyof typeof ICON_REGISTRY;
 
 export default function IconGrid({ filter = "" }: { filter?: string }) {
@@ -20,13 +66,13 @@ export default function IconGrid({ filter = "" }: { filter?: string }) {
     : ICONS;
 
   return (
-    <div className="select-none mx-auto max-w-[1200px] p-4 pb-8">
+    <div className="select-none mx-auto max-w-[1200px] px-3 pb-6 pt-0 sm:px-4 sm:pb-8">
       {filtered.length === 0 ? (
         <div className="text-center py-16">
           <p className="text-zinc-500 font-mono text-sm">No icons found for &quot;{filter}&quot;</p>
         </div>
       ) : (
-        <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 xl:grid-cols-8 gap-4">
+        <div className="grid grid-cols-2 min-[420px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8 gap-2.5 sm:gap-3 md:gap-4">
           {filtered.map(({ id, name }) => (
             <IconCard key={id} name={name} />
           ))}
@@ -38,6 +84,7 @@ export default function IconGrid({ filter = "" }: { filter?: string }) {
 
 function IconCard({ name }: { name: IconName }) {
   const [copied, setCopied] = useState(false);
+  const iconHostRef = useRef<HTMLDivElement>(null);
 
   const Icon = ICON_REGISTRY[name];
   const code = ICON_CODE[name];
@@ -49,25 +96,53 @@ function IconCard({ name }: { name: IconName }) {
     setTimeout(() => setCopied(false), 1200);
   };
 
+  const handlePlayAnimation = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (iconHostRef.current) {
+      dispatchSyntheticTapAtIconCenter(iconHostRef.current);
+    }
+  };
+
   return (
     <div
       className="
         relative group
         bg-[#111111] border border-[#1c1c1c] hover:border-[#2a2a2a] hover:bg-[#161616]
-        rounded-xl p-8 shadow-lg
+        rounded-lg sm:rounded-xl p-4 pb-11 sm:p-5 sm:pb-11 md:p-6 lg:p-8
+        shadow-lg
         flex items-center justify-center
+        min-h-0 aspect-square sm:aspect-auto sm:min-h-30 md:min-h-34
         transition-all duration-200
       "
     >
-      <Icon size={40} />
+      <div ref={iconHostRef} className="flex size-full min-h-0 items-center justify-center [&_svg]:max-h-full [&_svg]:w-auto [&_svg]:max-w-full">
+        <Icon size={40} />
+      </div>
 
       <button
+        type="button"
+        aria-label="Play icon animation"
+        onClick={handlePlayAnimation}
+        className="
+          md:hidden
+          absolute bottom-2 left-2 z-1
+          flex size-8 items-center justify-center rounded-lg
+          border border-[#2a2a2a] bg-[#1a1a1a] text-zinc-300
+          transition hover:bg-[#222] hover:text-white
+        "
+      >
+        <Play className="size-3.5" strokeWidth={2} />
+      </button>
+
+      <button
+        type="button"
         onClick={handleCopy}
         className="
-          absolute top-1 right-2
-           text-xs rounded-md
+          hidden md:flex
+          absolute top-2 right-2 md:top-2.5 md:right-2.5
+          items-center justify-center
+          text-xs rounded-md
           transition cursor-pointer
-          
         "
       >
         {copied ? <TickIcon/> :<Tooltip>

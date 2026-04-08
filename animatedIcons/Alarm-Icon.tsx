@@ -12,6 +12,9 @@ export function AlarmIcon({ size = 32 }: { size?: number }) {
       whileHover={{
         rotate: [-12, 12, -8, 8, -4, 4, 0],
       }}
+      whileTap={{
+        rotate: [-12, 12, -8, 8, -4, 4, 0],
+      }}
       transition={{
         duration: 0.8,
         ease: "easeInOut",

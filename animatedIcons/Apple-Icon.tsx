@@ -11,6 +11,7 @@ export function AppleIcon({ size = 32 }: { size?: number }) {
       strokeWidth={1.5}
       initial="initial"
       whileHover="hover"
+      whileTap="hover"
       variants={{
         hover: {
           y: -3,

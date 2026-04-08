@@ -11,6 +11,7 @@ export function ClockIcon() {
       stroke="white"
       strokeWidth="2"
       whileHover="hover"
+      whileTap="hover"
       initial="rest"
     >
       <motion.path

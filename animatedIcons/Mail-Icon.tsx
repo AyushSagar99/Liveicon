@@ -12,6 +12,7 @@ export function MailIcon() {
       strokeWidth="2"
       initial="rest"
       whileHover="hover"
+      whileTap="hover"
     >
       <motion.path
         d="M2 6L8.91302 9.91697C11.4616 11.361 12.5384 11.361 15.087 9.91697L22 6"

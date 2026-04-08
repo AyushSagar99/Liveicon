@@ -5,6 +5,7 @@ export function BallonsIcon() {
     <div>
         <motion.svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none" stroke="#ffffff" strokeWidth="1.5" 
         whileHover={{ y: -6, scale: 1.05 }}
+        whileTap={{ y: -6, scale: 1.05 }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
         >
             <path d="M15.5 6.5C15.5 8.98528 13.933 11 12 11C10.067 11 8.5 8.98528 8.5 6.5C8.5 4.01472 10.067 2 12 2C13.933 2 15.5 4.01472 15.5 6.5Z" />

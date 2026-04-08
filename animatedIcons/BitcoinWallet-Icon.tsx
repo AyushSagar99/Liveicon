@@ -11,6 +11,7 @@ export function BitcoinWalletIcon() {
       stroke="#ffffff"
       strokeWidth="1.5"
       whileHover="hover"
+      whileTap="hover"
       variants={{
         hover: { y: -4, scale: 1.04 },
       }}

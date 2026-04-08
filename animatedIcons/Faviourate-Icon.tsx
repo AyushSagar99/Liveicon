@@ -12,6 +12,10 @@ export function FaviourateIcon({ size = 32 }: { size?: number }) {
         fill: "red",
         scale: 1.2,
       }}
+      whileTap={{
+        fill: "red",
+        scale: 1.2,
+      }}
       transition={{
         duration: 0.25,
         ease: "easeInOut",

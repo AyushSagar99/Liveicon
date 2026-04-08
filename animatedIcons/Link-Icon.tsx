@@ -12,6 +12,7 @@ export function LinkIcon({ size = 32 }: { size?: number }) {
       strokeWidth={1.5}
       initial="initial"
       whileHover="hover"
+      whileTap="hover"
       transition={{ duration:0.5, type: "spring", stiffness: 500, damping: 20 }}
     >
       <motion.path

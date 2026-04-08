@@ -11,6 +11,9 @@ export function SettingIcon({size =32}:{size?: number}) {
     whileHover={{
         rotate:[0,90]
     }}
+    whileTap={{
+        rotate:[0,90]
+    }}
     transition={{
         repeat:Infinity,
     }}

@@ -12,6 +12,10 @@ export function SearchIcon({ size = 24 }: { size?: number }) {
         scale: 1.2,
         rotate: -9
       }}
+      whileTap={{
+        scale: 1.2,
+        rotate: -9
+      }}
       transition={{
         duration: 0.25,
         ease: "easeInOut",

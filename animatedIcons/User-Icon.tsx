@@ -10,6 +10,7 @@ export function UserIcon({ size = 32 }: { size?: number }) {
       stroke="white"
       strokeWidth="2"
       whileHover="hover"
+      whileTap="hover"
       variants={{
         hover: {
           y: -2,

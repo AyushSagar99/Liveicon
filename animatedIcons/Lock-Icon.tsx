@@ -11,6 +11,7 @@ export function LockIcon({ size = 32 }: { size?: number }) {
       strokeWidth="1.5"
       initial="initial"
       whileHover="hover"
+      whileTap="hover"
       variants={{
         hover: {
           rotate: [0, -2, 2, -1, 1, 0],

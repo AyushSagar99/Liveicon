@@ -5,6 +5,7 @@ export function AirdropIcon() {
     <div>
         <motion.svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="white" fill="none" stroke="currentColor" strokeWidth="1.5"
         whileHover='hover'
+        whileTap='hover'
         >
     <circle cx="12" cy="11" r="2" />
     <motion.path variants={{hover:{opacity:[0,1]}}} transition={{delay:0.1}} d="M4 17.001C2.74418 15.3295 2 13.2516 2 11C2 5.47715 6.47715 1 12 1C17.5228 1 22 5.47715 22 11C22 13.2516 21.2558 15.3295 20 17.001" />

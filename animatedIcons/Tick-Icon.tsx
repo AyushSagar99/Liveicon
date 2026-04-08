@@ -12,6 +12,9 @@ function TickIcon({size=20}:{size?: number}) {
     whileHover={{
         pathLength:[0,1]
     }}
+    whileTap={{
+        pathLength:[0,1]
+    }}
     >
     <path d="M5 14L8.5 17.5L19 6.5" />
     </motion.svg>

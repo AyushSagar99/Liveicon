@@ -7,6 +7,9 @@ export function NotificationIcon({size =32}: {size?: number}) {
     whileHover={{
       rotate: [-12, 12]
     }}
+    whileTap={{
+      rotate: [-12, 12]
+    }}
     transition={{
       duration: 0.3,
       repeat: Infinity,
