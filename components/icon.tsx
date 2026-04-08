@@ -22,6 +22,29 @@ function getAnimatedRoot(container: HTMLElement): SVGElement | null {
   return first instanceof SVGElement ? first : null;
 }
 
+/** Framer attaches whileTap to a specific node (path vs svg vs g). Pick a target that receives the gesture. */
+function resolveSyntheticTapTarget(root: SVGElement, x: number, y: number): Element {
+  const tag = root.tagName.toLowerCase();
+
+  if (tag === "g") {
+    return root;
+  }
+
+  if (root instanceof SVGSVGElement) {
+    const paths = root.querySelectorAll("path");
+    if (paths.length === 1) {
+      return paths[0];
+    }
+  }
+
+  const hit = document.elementFromPoint(x, y);
+  if (hit && root.contains(hit)) {
+    return hit;
+  }
+
+  return root;
+}
+
 let syntheticPointerId = 2_000;
 
 /**
@@ -39,10 +62,7 @@ function pressHoldSyntheticTapAtIconCenter(
   const rect = root.getBoundingClientRect();
   const x = rect.left + rect.width / 2;
   const y = rect.top + rect.height / 2;
-  let target: Element | null = document.elementFromPoint(x, y);
-  if (!target || !root.contains(target)) {
-    target = root;
-  }
+  const target = resolveSyntheticTapTarget(root, x, y);
   const el = target as HTMLElement | SVGElement;
   const pointerId = syntheticPointerId++;
 
