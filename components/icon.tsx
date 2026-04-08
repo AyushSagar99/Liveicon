@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Play } from "lucide-react";
 import { ICONS } from "@/utils/icon";
 import { ICON_REGISTRY } from "@/utils/iconRegistry";
@@ -22,9 +22,20 @@ function getAnimatedRoot(container: HTMLElement): SVGElement | null {
   return first instanceof SVGElement ? first : null;
 }
 
-function dispatchSyntheticTapAtIconCenter(container: HTMLElement) {
+let syntheticPointerId = 2_000;
+
+/**
+ * Framer Motion's whileTap stays active only while the pointer is down.
+ * A near-instant pointerup (e.g. next frame) cuts animations short; we hold
+ * the synthetic press long enough for typical hover/tap durations (~1s+).
+ */
+function pressHoldSyntheticTapAtIconCenter(
+  container: HTMLElement,
+  holdMs = 1600
+): () => void {
   const root = getAnimatedRoot(container);
-  if (!root) return;
+  if (!root) return () => {};
+
   const rect = root.getBoundingClientRect();
   const x = rect.left + rect.width / 2;
   const y = rect.top + rect.height / 2;
@@ -33,29 +44,38 @@ function dispatchSyntheticTapAtIconCenter(container: HTMLElement) {
     target = root;
   }
   const el = target as HTMLElement | SVGElement;
-  const init: PointerEventInit = {
+  const pointerId = syntheticPointerId++;
+
+  const base: PointerEventInit = {
     bubbles: true,
     cancelable: true,
+    view: typeof window !== "undefined" ? window : undefined,
     clientX: x,
     clientY: y,
-    pointerId: 1,
+    pointerId,
     pointerType: "touch",
     isPrimary: true,
     width: 1,
     height: 1,
     pressure: 0.5,
     button: 0,
-    buttons: 1,
   };
-  el.dispatchEvent(new PointerEvent("pointerdown", init));
-  requestAnimationFrame(() => {
-    el.dispatchEvent(
-      new PointerEvent("pointerup", {
-        ...init,
-        buttons: 0,
-      })
-    );
-  });
+
+  let released = false;
+  const release = () => {
+    if (released) return;
+    released = true;
+    el.dispatchEvent(new PointerEvent("pointerup", { ...base, buttons: 0 }));
+  };
+
+  el.dispatchEvent(new PointerEvent("pointerdown", { ...base, buttons: 1 }));
+
+  const timeoutId = window.setTimeout(release, holdMs);
+
+  return () => {
+    window.clearTimeout(timeoutId);
+    release();
+  };
 }
 
 type IconName = keyof typeof ICON_REGISTRY;
@@ -85,9 +105,17 @@ export default function IconGrid({ filter = "" }: { filter?: string }) {
 function IconCard({ name }: { name: IconName }) {
   const [copied, setCopied] = useState(false);
   const iconHostRef = useRef<HTMLDivElement>(null);
+  const playReleaseRef = useRef<(() => void) | null>(null);
 
   const Icon = ICON_REGISTRY[name];
   const code = ICON_CODE[name];
+
+  useEffect(() => {
+    return () => {
+      playReleaseRef.current?.();
+      playReleaseRef.current = null;
+    };
+  }, []);
 
   const handleCopy = (e: React.MouseEvent) => {
     e.stopPropagation(); 
@@ -98,8 +126,12 @@ function IconCard({ name }: { name: IconName }) {
 
   const handlePlayAnimation = (e: React.MouseEvent) => {
     e.stopPropagation();
+    playReleaseRef.current?.();
+    playReleaseRef.current = null;
     if (iconHostRef.current) {
-      dispatchSyntheticTapAtIconCenter(iconHostRef.current);
+      playReleaseRef.current = pressHoldSyntheticTapAtIconCenter(
+        iconHostRef.current
+      );
     }
   };
 
