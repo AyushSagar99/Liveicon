@@ -35,6 +35,9 @@ function resolveSyntheticTapTarget(root: SVGElement, x: number, y: number): Elem
     if (paths.length === 1) {
       return paths[0];
     }
+    if (paths.length > 1) {
+      return root;
+    }
   }
 
   const hit = document.elementFromPoint(x, y);
@@ -50,11 +53,11 @@ let syntheticPointerId = 2_000;
 /**
  * Framer Motion's whileTap stays active only while the pointer is down.
  * A near-instant pointerup (e.g. next frame) cuts animations short; we hold
- * the synthetic press long enough for typical hover/tap durations (~1s+).
+ * the synthetic press long enough for typical tap transitions (~0.5–1s).
  */
 function pressHoldSyntheticTapAtIconCenter(
   container: HTMLElement,
-  holdMs = 1600
+  holdMs = 1000
 ): () => void {
   const root = getAnimatedRoot(container);
   if (!root) return () => {};
