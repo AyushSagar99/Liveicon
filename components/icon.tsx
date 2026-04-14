@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Play } from "lucide-react";
 import { ICONS } from "@/utils/icon";
-import { ICON_REGISTRY } from "@/utils/iconRegistry";
+import { ICON_REGISTRY, type IconName } from "@/utils/iconRegistry";
 import { ICON_CODE } from "@/utils/iconCode";
 import { Copy } from "@/animatedIcons/Copy";
 import TickIcon from "@/animatedIcons/Tick-Icon";
@@ -101,11 +101,9 @@ function pressHoldSyntheticTapAtIconCenter(
   };
 }
 
-type IconName = keyof typeof ICON_REGISTRY;
-
 export default function IconGrid({ filter = "" }: { filter?: string }) {
   const filtered = filter
-    ? ICONS.filter(({ name }) => name.toLowerCase().includes(filter.toLowerCase()))
+    ? ICONS.filter((name) => name.toLowerCase().includes(filter.toLowerCase()))
     : ICONS;
 
   return (
@@ -116,8 +114,8 @@ export default function IconGrid({ filter = "" }: { filter?: string }) {
         </div>
       ) : (
         <div className="grid grid-cols-2 min-[420px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8 gap-2.5 sm:gap-3 md:gap-4">
-          {filtered.map(({ id, name }) => (
-            <IconCard key={id} name={name} />
+          {filtered.map((name) => (
+            <IconCard key={name} name={name} />
           ))}
         </div>
       )}

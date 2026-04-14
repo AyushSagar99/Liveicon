@@ -1,9 +1,4 @@
-/* AUTO-GENERATED FILE — do not edit. Run: npm run icons:generate */
-
-import type { IconName } from "./iconRegistry";
-
-/** Grid order for /icons; edit animatedIcons/icon-order.json to reorder. */
-export const ICONS: IconName[] = [
+[
   "twitter",
   "youtube",
   "apple",
@@ -44,5 +39,5 @@ export const ICONS: IconName[] = [
   "bitcoinwallet",
   "mining",
   "ethereum",
-  "chartCandle",
-];
+  "chartCandle"
+]

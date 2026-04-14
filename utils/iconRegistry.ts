@@ -1,19 +1,21 @@
-import { TaskIcon } from "@/animatedIcons/Task-Icon";
+/* AUTO-GENERATED FILE — do not edit. Run: npm run icons:generate */
+
 import { TwitterIcon } from "@/animatedIcons/Twitter-Icon";
+import { YoutubeIcon } from "@/animatedIcons/Youtube-Icon";
+import { AppleIcon } from "@/animatedIcons/Apple-Icon";
+import { GithubIcon } from "@/animatedIcons/Github-Icon";
+import { InstagramIcon } from "@/animatedIcons/Instagram-Icon";
+import { TaskIcon } from "@/animatedIcons/Task-Icon";
 import { StarIcon } from "@/animatedIcons/Star-Icon";
-import {ThumbsupIcon} from "@/animatedIcons/Thumbsup-Icon";
-import {YoutubeIcon} from "@/animatedIcons/Youtube-Icon";
-import {SearchIcon} from "@/animatedIcons/Search-Icon";
-import {NotificationIcon} from "@/animatedIcons/Notification"
+import { ThumbsupIcon } from "@/animatedIcons/Thumbsup-Icon";
+import { SearchIcon } from "@/animatedIcons/Search-Icon";
+import { NotificationIcon } from "@/animatedIcons/Notification";
 import { FaviourateIcon } from "@/animatedIcons/Faviourate-Icon";
 import { DownloadIcon } from "@/animatedIcons/Download-Icon";
 import { AddIcon } from "@/animatedIcons/Add-Icon";
 import { AlarmIcon } from "@/animatedIcons/Alarm-Icon";
 import { SettingIcon } from "@/animatedIcons/Setting-Icon";
 import { LinkIcon } from "@/animatedIcons/Link-Icon";
-import { AppleIcon } from "@/animatedIcons/Apple-Icon";
-import { GithubIcon } from "@/animatedIcons/Github-Icon";
-import { InstagramIcon } from "@/animatedIcons/Instagram-Icon";
 import { DeleteIcon } from "@/animatedIcons/Delete-Icon";
 import { LockIcon } from "@/animatedIcons/Lock-Icon";
 import { LocationIcon } from "@/animatedIcons/Location-Icon";
@@ -38,48 +40,50 @@ import { AnonymousIcon } from "@/animatedIcons/Anonymous-Icon";
 import { BitcoinWalletIcon } from "@/animatedIcons/BitcoinWallet-Icon";
 import { MiningIcon } from "@/animatedIcons/Mining-Icon";
 import { EthereumIcon } from "@/animatedIcons/Ethereum-Icon";
+import { ChartCandleIcon } from "@/animatedIcons/ChartCandle-Icon";
 
 export const ICON_REGISTRY = {
-  task: TaskIcon,
   twitter: TwitterIcon,
+  youtube: YoutubeIcon,
+  apple: AppleIcon,
+  github: GithubIcon,
+  instagram: InstagramIcon,
+  task: TaskIcon,
   star: StarIcon,
-  thumbsup:ThumbsupIcon,
-  youtube:YoutubeIcon,
-  search:SearchIcon,
-  notification:NotificationIcon,
-  faviourate:FaviourateIcon,
-  download:DownloadIcon,
-  add:AddIcon,
-  alarm:AlarmIcon,
-  setting:SettingIcon,
-  link:LinkIcon,
-  apple:AppleIcon,
-  github:GithubIcon,
-  instagram:InstagramIcon,
-  delete:DeleteIcon,
-  lock:LockIcon,
-  location:LocationIcon,
-  user:UserIcon,
-  accident:AccidentIcon,
-  compass:CompassIcon,
-  activity:ActivityIcon,
-  square:SquareIcon,
-  comment:CommentIcon,
-  camera:CameraIcon,
-  battery:BatteryFullIcon,
-  bookmark:BookmarkIcon,
-  clock:ClockIcon,
-  mail:MailIcon,
-  airplane:AirplaneIcon,
-  airplaneOff:AirplaneOffIcon,
-  airdrop:AirdropIcon,
-  amazon:AmazonIcon,
-  ballons:BallonsIcon,
-  android:AndroidIcon,
-  anonymous:AnonymousIcon,
-  bitcoinwallet:BitcoinWalletIcon,
-  mining:MiningIcon,
-  ethereum:EthereumIcon,
-};
+  thumbsup: ThumbsupIcon,
+  search: SearchIcon,
+  notification: NotificationIcon,
+  faviourate: FaviourateIcon,
+  download: DownloadIcon,
+  add: AddIcon,
+  alarm: AlarmIcon,
+  setting: SettingIcon,
+  link: LinkIcon,
+  delete: DeleteIcon,
+  lock: LockIcon,
+  location: LocationIcon,
+  user: UserIcon,
+  accident: AccidentIcon,
+  compass: CompassIcon,
+  activity: ActivityIcon,
+  square: SquareIcon,
+  comment: CommentIcon,
+  camera: CameraIcon,
+  battery: BatteryFullIcon,
+  bookmark: BookmarkIcon,
+  clock: ClockIcon,
+  mail: MailIcon,
+  airplane: AirplaneIcon,
+  airplaneOff: AirplaneOffIcon,
+  airdrop: AirdropIcon,
+  amazon: AmazonIcon,
+  ballons: BallonsIcon,
+  android: AndroidIcon,
+  anonymous: AnonymousIcon,
+  bitcoinwallet: BitcoinWalletIcon,
+  mining: MiningIcon,
+  ethereum: EthereumIcon,
+  chartCandle: ChartCandleIcon,
+} as const;
 
 export type IconName = keyof typeof ICON_REGISTRY;
