@@ -33,11 +33,14 @@ export default function AsciiIconsPage() {
             </h1>
             <p className="mt-3 text-zinc-500 font-mono text-sm max-w-lg leading-relaxed">
               <span className="md:hidden">
-                {total} frame-based icons. Tap play on a card to run the loop.
+                {total} frame-based icons. Tap play to animate; copy pastes a ready-to-use React
+                component.
               </span>
               <span className="hidden md:inline">
                 {total} monospace icons built from multiline{" "}
-                <span className="text-zinc-400">frames</span>. Hover to cycle; copy grabs plain text.
+                <span className="text-zinc-400">frames</span>. Hover to cycle. Copy grabs a full{" "}
+                <span className="text-zinc-400">&quot;use client&quot;</span> component (paste into
+                your app, no extra deps).
               </span>
             </p>
           </div>

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import type { AsciiIconDef } from "@/utils/asciiIconRegistry";
 import {
   ASCII_ICONS,
-  asciiIconToCopyText,
+  asciiIconToReactSnippet,
 } from "@/utils/asciiIconRegistry";
 import { Copy } from "@/animatedIcons/Copy";
 import TickIcon from "@/animatedIcons/Tick-Icon";
@@ -108,7 +108,7 @@ function AsciiIconCard({ def }: { def: AsciiIconDef }) {
 
   const handleCopy = (e: React.MouseEvent) => {
     e.stopPropagation();
-    void navigator.clipboard.writeText(asciiIconToCopyText(def));
+    void navigator.clipboard.writeText(asciiIconToReactSnippet(def));
     setCopied(true);
     window.setTimeout(() => setCopied(false), 1200);
   };
@@ -170,10 +170,11 @@ function AsciiIconCard({ def }: { def: AsciiIconDef }) {
 
       <button
         type="button"
+        aria-label="Copy React component code"
         onClick={handleCopy}
         className="
-          hidden md:flex
-          absolute top-2 right-2 md:top-2.5 md:right-2.5
+          flex
+          absolute bottom-2 right-2 md:top-2.5 md:right-2.5 md:bottom-auto
           items-center justify-center
           text-xs rounded-md
           transition cursor-pointer
@@ -186,7 +187,7 @@ function AsciiIconCard({ def }: { def: AsciiIconDef }) {
             <TooltipTrigger delay={0}>
               <Copy />
             </TooltipTrigger>
-            <TooltipPopup>copy all frames (text)</TooltipPopup>
+            <TooltipPopup>Copy React component</TooltipPopup>
           </Tooltip>
         )}
       </button>
