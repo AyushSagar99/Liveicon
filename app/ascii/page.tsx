@@ -38,7 +38,6 @@ export default function AsciiIconsPage() {
               <span className="hidden md:inline">
                 {total} monospace icons built from multiline{" "}
                 <span className="text-zinc-400">frames</span>. Hover to cycle; copy grabs plain text.
-                Edit <code className="text-zinc-400">asciiIcons.json</code> to add more.
               </span>
             </p>
           </div>
