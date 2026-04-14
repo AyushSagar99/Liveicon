@@ -1,19 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import IconGrid from "@/components/icon";
+import AsciiIconGrid from "@/components/ascii-icon-grid";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { ICONS } from "@/utils/icon";
+import { ASCII_ICONS } from "@/utils/asciiIconRegistry";
 
-export default function Icons() {
+export default function AsciiIconsPage() {
   const [search, setSearch] = useState("");
-
-  const totalIcons = ICONS.length;
+  const total = ASCII_ICONS.length;
 
   return (
     <div className="min-h-screen bg-[#080808]">
-      {/* Header */}
       <section className="mx-auto max-w-[1200px] px-4 pt-24 pb-6 sm:px-6 sm:pt-28 sm:pb-8">
         <motion.div
           className="flex flex-col md:flex-row md:items-end justify-between gap-6"
@@ -24,26 +22,27 @@ export default function Icons() {
           <div>
             <p className="mb-3">
               <Link
-                href="/ascii"
+                href="/icons"
                 className="text-xs font-mono text-zinc-500 hover:text-zinc-300 transition-colors"
               >
-                ASCII icons →
+                ← Animated SVG icons
               </Link>
             </p>
             <h1 className="text-3xl min-[420px]:text-4xl sm:text-5xl font-bold text-zinc-200 tracking-tight">
-              Icon Collection
+              ASCII icons
             </h1>
-            <p className="mt-3 text-zinc-500 font-mono text-sm max-w-md leading-relaxed">
+            <p className="mt-3 text-zinc-500 font-mono text-sm max-w-lg leading-relaxed">
               <span className="md:hidden">
-                {totalIcons} animated icons. Tap play on a card to run its animation.
+                {total} frame-based icons. Tap play on a card to run the loop.
               </span>
               <span className="hidden md:inline">
-                {totalIcons} animated icons. Hover to preview. Click copy to grab the TSX code.
+                {total} monospace icons built from multiline{" "}
+                <span className="text-zinc-400">frames</span>. Hover to cycle; copy grabs plain text.
+                Edit <code className="text-zinc-400">asciiIcons.json</code> to add more.
               </span>
             </p>
           </div>
 
-          {/* Search */}
           <div className="relative w-full md:w-72">
             <svg
               className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500"
@@ -57,7 +56,7 @@ export default function Icons() {
             </svg>
             <input
               type="text"
-              placeholder="Search icons..."
+              placeholder="Search ASCII icons..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#0e0e0e] border border-[#1c1c1c] text-zinc-300 text-sm font-mono placeholder:text-zinc-600 focus:outline-none focus:border-[#2a2a2a] focus:bg-[#121212] transition-all duration-200"
@@ -65,18 +64,16 @@ export default function Icons() {
           </div>
         </motion.div>
 
-        {/* Divider */}
         <div className="mt-8 border-t border-[#1a1a1a]" />
       </section>
 
-      {/* Icon Grid */}
       <section className="pb-12 sm:pb-20">
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.15 }}
+          transition={{ duration: 0.5, delay: 0.12 }}
         >
-          <IconGrid filter={search} />
+          <AsciiIconGrid filter={search} />
         </motion.div>
       </section>
     </div>

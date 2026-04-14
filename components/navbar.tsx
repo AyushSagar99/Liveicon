@@ -9,27 +9,42 @@ function Navbar() {
       <div className="mx-auto max-w-6xl px-6">
         <div
           className="
-            flex items-center justify-between
-            h-16
+            grid h-16 w-full grid-cols-[1fr_auto_1fr] items-center gap-3
             backdrop-blur-xl
             bg-[#0a0a0a]/80
             border border-[#1f1f1f]
             rounded-2xl
             shadow-lg
             mt-4
-            px-6
+            px-4 sm:px-6
           "
         >
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold tracking-tight text-white">
+          <Link href="/" className="flex min-w-0 items-center gap-2 justify-self-start">
+            <span className="text-lg sm:text-xl font-bold tracking-tight text-white truncate">
               Live<span className="text-zinc-400">icons</span>
             </span>
           </Link>
+
+          <nav className="flex items-center gap-0.5 sm:gap-2 justify-self-center">
+            <Link
+              href="/icons"
+              className="px-2 py-1.5 sm:px-3 rounded-lg text-xs sm:text-sm font-mono text-zinc-400 hover:text-white hover:bg-white/5 transition-colors"
+            >
+              SVG
+            </Link>
+            <Link
+              href="/ascii"
+              className="px-2 py-1.5 sm:px-3 rounded-lg text-xs sm:text-sm font-mono text-zinc-400 hover:text-white hover:bg-white/5 transition-colors"
+            >
+              ASCII
+            </Link>
+          </nav>
 
           <Link
             href="https://github.com/AyushSagar99/Liveicon"
             target="_blank"
             className="
+              justify-self-end
               text-white/80
               hover:text-white
               transition
