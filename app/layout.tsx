@@ -15,9 +15,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LiveIcons",
-  icons:"/liveicon.ico",
-  description: "Animated Icons library",
+  metadataBase: new URL("https://liveicon.vercel.app"),
+  title: {
+    default: "LiveIcons — Animated React icons you copy & paste",
+    template: "%s — LiveIcons",
+  },
+  description:
+    "Open-source animated icon library built with SVG and Framer Motion. Copy the TSX, paste it in your React project, ship delightful interfaces.",
+  icons: "/liveicon.ico",
+  openGraph: {
+    title: "LiveIcons — Animated React icons you copy & paste",
+    description:
+      "Open-source animated icon library built with SVG and Framer Motion. No package install — copy the TSX and ship.",
+    url: "/",
+    siteName: "LiveIcons",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LiveIcons — Animated React icons you copy & paste",
+    description:
+      "Open-source animated icon library built with SVG and Framer Motion. No package install — copy the TSX and ship.",
+  },
 };
 
 export default function RootLayout({
@@ -28,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased text-zinc-200`}
       >
         <Navbar/>
         {children}

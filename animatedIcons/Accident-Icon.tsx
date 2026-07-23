@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function AccidentIcon() {
   return (
-    <motion.svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="white" fill="none" stroke="currentColor" strokeWidth="1.5"
+    <motion.svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" strokeWidth="1.5"
     whileHover='hover'
     whileTap='hover'
     >

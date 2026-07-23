@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export function AnonymousIcon() {
   return (
     <div>
-        <motion.svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+        <motion.svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
         whileHover="hover"
         whileTap="hover"
         >

@@ -8,7 +8,7 @@ export function ClockIcon() {
       width="40"
       height="40"
       fill="none"
-      stroke="white"
+      stroke="currentColor"
       strokeWidth="2"
       whileHover="hover"
       whileTap="hover"

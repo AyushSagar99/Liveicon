@@ -20,7 +20,7 @@ export function BatteryFullIcon() {
       width="40"
       height="40"
       fill="none"
-      stroke="white"
+      stroke="currentColor"
       strokeWidth="1.5"
       whileHover="hover"
       whileTap="hover"

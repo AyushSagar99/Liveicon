@@ -7,7 +7,7 @@ export function Copy({size=32}:{size?: number}) {
     height={16}
     viewBox='0 0 24 24'
     fill='none'
-    stroke='white'
+    stroke="currentColor"
     className='cursor-pointer'
     >
     <path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" />

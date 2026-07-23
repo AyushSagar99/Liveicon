@@ -7,7 +7,7 @@ export function InstagramIcon({size=32}:{size?: number}) {
     height={size}
     viewBox='0 0 24 24'
     fill='none'
-    stroke='white'
+    stroke="currentColor"
     strokeWidth={2}
     whileHover='hover'
     whileTap='hover'
@@ -26,7 +26,7 @@ export function InstagramIcon({size=32}:{size?: number}) {
     transition={{
         duration:0.5
     }}
-    cx="17.5" cy="6.5" r="1" fill="white" />
+    cx="17.5" cy="6.5" r="1" fill="currentColor" />
     </motion.svg>
   )
 }

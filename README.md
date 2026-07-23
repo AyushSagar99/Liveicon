@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LiveIcons
 
-## Getting Started
+**Animated React icons you copy & paste.** Built with SVG + [Framer Motion](https://motion.dev). No package to install, no extra bundle — grab the TSX and ship.
 
-First, run the development server:
+**[Live demo → liveicon.vercel.app](https://liveicon.vercel.app)**
+
+<!-- TODO: record a short GIF of the /icons page and drop it here -->
+<!-- ![LiveIcons demo](public/demo.gif) -->
+
+## Why
+
+Icon packages ship hundreds of icons you never use. LiveIcons flips that: browse the [collection](https://liveicon.vercel.app/icons), hover to preview the animation, click copy — you own the component. Each icon is a single self-contained TSX file.
+
+- 🎬 **40+ hand-crafted animations** — hover and tap interactions on every icon
+- 📋 **Copy & paste** — no install, no lock-in, the code lives in your repo
+- 🔤 **TypeScript first** — typed props, zero `any`
+- 🧵 **ASCII icons too** — frame-based monospace icons at [/ascii](https://liveicon.vercel.app/ascii)
+
+## Usage
+
+The only dependency is Framer Motion:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm add framer-motion
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Copy an icon from the [collection](https://liveicon.vercel.app/icons) into your project, then use it like any component:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```tsx
+import { StarIcon } from "@/components/icons/Star-Icon";
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+export default function Page() {
+  return <StarIcon size={32} />;
+}
+```
 
-## Learn More
+Hover or tap the icon and it animates. Tweak the `motion` props in the copied file to make it yours.
 
-To learn more about Next.js, take a look at the following resources:
+## Running locally
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm install
+pnpm dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Icons live in [`animatedIcons/`](animatedIcons/). The registry is auto-generated — after adding an icon, run:
 
-## Deploy on Vercel
+```bash
+pnpm icons:generate
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+New icons welcome. Add a `Name-Icon.tsx` file to `animatedIcons/` following the existing pattern (one component, `size` prop, Framer Motion hover/tap animation), run `pnpm icons:generate`, and open a PR.
+
+## License
+
+[MIT](LICENSE)

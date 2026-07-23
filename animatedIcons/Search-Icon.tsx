@@ -7,7 +7,7 @@ export function SearchIcon({ size = 24 }: { size?: number }) {
       height={size}
       viewBox="0 0 24 24"
       fill="none"
-      stroke="white"
+      stroke="currentColor"
       whileHover={{
         scale: 1.2,
         rotate: -9

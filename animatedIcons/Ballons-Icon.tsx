@@ -3,7 +3,7 @@ import { easeInOut, motion } from "framer-motion";
 export function BallonsIcon() {
   return (
     <div>
-        <motion.svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none" stroke="#ffffff" strokeWidth="1.5" 
+        <motion.svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" color="#ffffff" fill="none" stroke="currentColor" strokeWidth="1.5" 
         whileHover={{ y: -6, scale: 1.05 }}
         whileTap={{ y: -6, scale: 1.05 }}
         transition={{ duration: 0.4, ease: "easeInOut" }}

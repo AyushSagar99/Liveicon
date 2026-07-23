@@ -7,7 +7,7 @@ export function AlarmIcon({ size = 32 }: { size?: number }) {
       height={size}
       viewBox="0 0 24 24"
       fill="none"
-      stroke="white"
+      stroke="currentColor"
       style={{ originX: "50%", originY: "50%" }}
       whileHover={{
         rotate: [-12, 12, -8, 8, -4, 4, 0],

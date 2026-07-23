@@ -6,7 +6,7 @@ export function FaviourateIcon({ size = 32 }: { size?: number }) {
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      stroke="white"
+      stroke="currentColor"
       fill="none"
       whileHover={{
         fill: "red",

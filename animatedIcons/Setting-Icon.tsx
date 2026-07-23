@@ -6,7 +6,7 @@ export function SettingIcon({size =32}:{size?: number}) {
     width={size}
     height={size}
     viewBox="0 0 24 24"
-    stroke="white"
+    stroke="currentColor"
     fill="none"
     whileHover={{
         rotate:[0,90]

@@ -2,7 +2,7 @@ import { motion, spring } from "framer-motion";
 
 export function LocationIcon({size=32}:{size?: number}) {
   return (
-    <motion.svg viewBox="0 0 24 24" width={size} height={size}  fill="none" stroke="white" strokeWidth="1.5"
+    <motion.svg viewBox="0 0 24 24" width={size} height={size}  fill="none" stroke="currentColor" strokeWidth="1.5"
     whileHover={{
         y:[-3,0]
     }}

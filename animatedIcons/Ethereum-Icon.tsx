@@ -8,7 +8,7 @@ export function EthereumIcon() {
       width="40"
       height="40"
       fill="none"
-      stroke="#ffffff"
+      stroke="currentColor"
       strokeWidth="1.5"
       initial={{rotate:0}}
       whileHover={{ y: -4, rotate: [6,-6] }}

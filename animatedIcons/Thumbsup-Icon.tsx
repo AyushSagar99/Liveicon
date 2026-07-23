@@ -7,7 +7,7 @@ export function ThumbsupIcon({ size = 32 }: { size?: number }) {
       height={size}
       viewBox="0 0 24 24"
       fill="none"
-      stroke="white"
+      stroke="currentColor"
       strokeWidth={2}
       whileHover={{
         rotate:[30,0]
